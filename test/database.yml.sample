@@ -15,6 +15,10 @@ mysql2spatial:
 mysql2_makara:
   <<: *mysql2
 
+trilogy:
+  <<: *common
+  adapter: trilogy
+
 postgresql: &postgresql
   <<: *common
   username: postgres

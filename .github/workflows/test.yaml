@@ -99,6 +99,10 @@ jobs:
         run: |
           bundle exec rake test:spatialite
           bundle exec rake test:sqlite3
+        if: ${{ matrix.env.AR_VERSION > '6.0' }}
+      - name: Run tests with trilogy
+        run: |
+          bundle exec rake test:trilogy
   lint:
     runs-on: ubuntu-latest
     env:
